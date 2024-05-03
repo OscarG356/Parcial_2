@@ -25,6 +25,8 @@ buttonSearch.addEventListener("click", async function () {
 
   if (textbox == "") {
     containerError.setAttribute("style", "display:block");
+    containerInfo.setAttribute("style", "display:none");
+    containerEvolution.setAttribute("style", "display:none");
     return;
   }
   else {
@@ -41,6 +43,7 @@ buttonSearch.addEventListener("click", async function () {
 //Click en evolución
 buttonEvolution.addEventListener("click", async function () {
     url = name + Pokeevo1;
+    console.log(url);
     data = await consulta(url);
   
     card(data);
